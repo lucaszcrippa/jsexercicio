@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Saudação Personalizada</h1>
+    <button onclick="saudar()">Saudar</button>
+  
+    <script>
+      function saudar() {
+        const nome = prompt("Qual é o seu nome?");
+        const turno = prompt("Qual turno? (manhã, tarde ou noite)");
+        console.log(`Olá, ${nome}! Boa ${turno}!`);
+      }
+    </script>
+</body>
+</html>

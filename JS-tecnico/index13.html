@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Coletar Informações</h1>
+    <button onclick="coletarInformacoes()">Enviar</button>
+  
+    <script>
+      function coletarInformacoes() {
+        const nome = prompt("Digite seu nome:");
+        const idade = prompt("Digite sua idade:");
+        const profissao = prompt("Digite sua profissão:");
+  
+        console.log("------ Informações do Usuário ------");
+        console.log("Nome:", nome);
+        console.log("Idade:", idade);
+        console.log("Profissão:", profissao);
+      }
+    </script>
+</body>
+</html>

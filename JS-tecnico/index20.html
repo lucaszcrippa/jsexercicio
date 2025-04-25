@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabela de Variáveis</title>
+  <style>
+    body {
+      background-color: #e3f2fd;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 60px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1565c0;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 700px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #90caf9;
+      padding: 12px 18px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #1976d2;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #e3f2fd;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tabela Dinâmica de Variáveis</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Nome da Variável</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody id="corpoTabela">
+      <!-- Linhas serão inseridas aqui pelo JavaScript -->
+    </tbody>
+  </table>
+
+  <button onclick="preencherTabela()">Preencher Tabela</button>
+
+  <script>
+    function preencherTabela() {
+      const corpo = document.getElementById("corpoTabela");
+      corpo.innerHTML = ""; // Limpa a tabela antes de preencher
+
+      var linguagem = "JavaScript";
+      let ano = 2025;
+      const pi = 3.14;
+
+      const variaveis = [
+        { tipo: "var", nome: "linguagem", valor: linguagem },
+        { tipo: "let", nome: "ano", valor: ano },
+        { tipo: "const", nome: "pi", valor: pi }
+      ];
+
+      variaveis.forEach((item) => {
+        const linha = document.createElement("tr");
+        linha.innerHTML = `
+          <td>${item.tipo}</td>
+          <td>${item.nome}</td>
+          <td>${item.valor}</td>
+        `;
+        corpo.appendChild(linha);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Verifique um Número</h1>
+    <button onclick="verificarNumero()">Verificar</button>
+  
+    <script>
+      function verificarNumero() {
+        const numero = Number(prompt("Digite um número:"));
+        if (numero > 10) {
+          console.log("O número é maior que 10.");
+        } else {
+          console.log("O número NÃO é maior que 10.");
+        }
+      }
+    </script>
+</body>
+</html>

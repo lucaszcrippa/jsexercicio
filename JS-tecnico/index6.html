@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste com const</h1>
+    <p class="aviso">Abra o console para ver o erro ao tentar alterar uma constante.</p>
+  
+    <script>
+      const pi = 3.14;
+      console.log("Valor original de pi:", pi);
+      
+      try {
+        pi = 3.1415; 
+      } catch (erro) {
+        console.error("Erro ao tentar alterar uma constante:", erro);
+      }
+    </script>
+</body>
+</html>
